@@ -1,0 +1,237 @@
+/* General Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.main-content {
+    flex: 1;
+}
+
+/* Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hover.avif') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    height: 100vh; /* Fixed height to 100% viewport */
+    width: 100%; /* Para hindi sumobra ang laki */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: #f8f9fa;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    color: #f8f9fa;
+}
+
+/* Buttons */
+.btn-warning {
+    background-color: #ffc107;
+    border: none;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: 0.3s;
+    color: black;
+}
+
+.btn-warning:hover {
+    background-color: #e6a700;
+}
+
+/* Courses Section */
+.courses {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f8f9fa;
+}
+
+.courses h2 {
+    font-size: 5.5rem;
+    margin: 60px 0; /* 50px top & bottom spacing */
+    font-weight: bold;
+    color: #222;
+}
+
+/* Responsive Course Grid */
+.course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Para siguradong naka-center */
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+    padding-top: 50px; /* Dagdag spacing para hindi dikit sa navbar */
+}
+
+/* Course Card */
+.course-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 50px; /* Para hindi sya dumikit sa navbar */
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.course-card h3 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Course Card Image */
+.course-card img {
+    width: 100%;
+    height: 180px; /* Pwede mong palitan kung gusto mong mas malaki/maliit */
+    object-fit: cover; /* Para hindi ma-distort ang image */
+    border-radius: 8px; /* Para mas mukhang aesthetic */
+    margin-bottom: 15px;
+}
+
+
+/* Buttons */
+.btn-dark {
+    background-color: #222;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-dark:hover {
+    background-color: #111;
+}
+
+/* Footer */
+.footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+.footer a {
+    color: #ffc107;
+    margin: 0 5px;
+}
+
+.footer a:hover {
+    color: #e6a700;
+}
+.footer i {
+    position: relative;
+    z-index: 10;
+}
+
+
+/* MISSION */
+.mission-vision {
+    padding-top: 100px; /* Para hindi matakpan ng navbar */
+}
+
+.mission-icon, .vision-icon {
+    font-size: 50px; /* Adjust icon size */
+    color: #ffc107; /* Yellow-Gold */
+}
+
+/* DEVELOPER */
+.meet-the-developer {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.meet-the-developer img {
+    width: 150px; /* Pwede mong bawasan or dagdagan */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.meet-the-developer h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.meet-the-developer p {
+    font-size: 1rem;
+    color: #555;
+}
+/* sa contact ko ito */
+.contact-section {
+    padding-top: 45px; /* Para bumaba yung "Get in Touch with Us" */
+}
+
+/* carousel */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    filter: invert(100%); /* Para maging puti yung arrow */
+    border-radius: 50%; /* Para bilog */
+    padding: 10px;
+}
+
+/* sa programming basics */
+.programmingbasics-section {
+    padding-top: 45px; /* Para bumaba yung section */
+}
+
+/* Web development */
+.webdevelopment-section {
+    padding-top: 45px; /* Para bumaba yung section */
+}
+/* sa cybersec ko */
+.cybersecurity-section {
+    padding-top: 45px; /* Para bumaba yung section */
+}

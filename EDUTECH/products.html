@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech | Products </title>
+    <link rel="icon" type="image/x-icon" href="edutechfav1.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EduTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <!-- <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="library.html">Library</a></li> <!-- Ginawang active -->
+                    <li class="nav-item"><a class="nav-link active" href="#">Products</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Settings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="authDropdown">
+                            <li><a class="dropdown-item" href="personal-details.html">Personal details</a></li>
+                            <li><a class="dropdown-item" href="passwordandsecurity.html">Password and security</a></li>
+                            <li><a class="dropdown-item" href="logout.html">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Section -->
+    <section id="products" class="products py-5" style="margin-top: 90px;">
+        <div class="container text-center">
+            <h2 class="mb-4 display-4" style="font-weight: bold;">Our Products</h2>
+            <div class="row justify-content-center">
+                <!-- Product 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="progbasics.png" class="card-img-top" alt="Programming Basics">
+                        <div class="card-body">
+                            <h5 class="card-title">Programming Basics Book</h5>
+                            <p class="card-text">Learn Python, JavaScript, and more.</p>
+                            <button class="btn btn-dark view-btn" data-bs-toggle="modal" data-bs-target="#productModal1">View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="webdev.png" class="card-img-top" alt="Web Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development Book</h5>
+                            <p class="card-text">Build websites with HTML, CSS, and JS.</p>
+                            <button class="btn btn-dark view-btn" data-bs-toggle="modal" data-bs-target="#productModal2">View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="cybersec.jpg" class="card-img-top" alt="Cybersecurity">
+                        <div class="card-body">
+                            <h5 class="card-title">Cybersecurity Book</h5>
+                            <p class="card-text">Understand ethical hacking and security.</p>
+                            <button class="btn btn-dark view-btn" data-bs-toggle="modal" data-bs-target="#productModal3">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cart Icon -->
+            <div class="cart-icon position-fixed" style="top: 90px; right: 40px; z-index: 1050;">
+                <button class="btn btn-outline-dark position-relative" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="fas fa-shopping-cart fa-2x"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal1Label">Programming Basics</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="progbasics.png" class="img-fluid mb-3" alt="Programming Basics">
+            <p>Learn Python, JavaScript, and more. Perfect for beginners who want to start coding.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success add-to-cart-btn" data-product="Programming Basics" data-bs-dismiss="modal">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal2Label">Web Development</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="webdev.png" class="img-fluid mb-3" alt="Web Development">
+            <p>Build websites with HTML, CSS, and JavaScript. Start your web journey here.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success add-to-cart-btn" data-product="Web Development" data-bs-dismiss="modal">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal 3 -->
+    <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal3Label">Cybersecurity</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="cybersec.jpg" class="img-fluid mb-3" alt="Cybersecurity">
+            <p>Understand ethical hacking and security. Protect yourself and others online.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-success add-to-cart-btn" data-product="Cybersecurity" data-bs-dismiss="modal">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="cartModalLabel"><i class="fas fa-shopping-cart"></i> Cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-group" id="cart-items">
+              <!-- Cart items will appear here -->
+            </ul>
+            <div id="empty-cart-msg" class="text-muted mt-3">Your cart is empty.</div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-danger" id="clear-cart-btn">Clear Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        // Cart logic
+        let cart = [];
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            const cartCount = document.getElementById('cart-count');
+            const emptyMsg = document.getElementById('empty-cart-msg');
+            cartItems.innerHTML = '';
+            if (cart.length === 0) {
+                emptyMsg.style.display = 'block';
+            } else {
+                emptyMsg.style.display = 'none';
+                cart.forEach((item, idx) => {
+                    const li = document.createElement('li');
+                    li.className = 'list-group-item d-flex justify-content-between align-items-center';
+                    li.textContent = item;
+                    const removeBtn = document.createElement('button');
+                    removeBtn.className = 'btn btn-sm btn-outline-danger ms-2';
+                    removeBtn.textContent = 'Remove';
+                    removeBtn.onclick = function() {
+                        cart.splice(idx, 1);
+                        updateCartDisplay();
+                    };
+                    li.appendChild(removeBtn);
+                    cartItems.appendChild(li);
+                });
+            }
+            cartCount.textContent = cart.length;
+        }
+
+        document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const product = this.getAttribute('data-product');
+                cart.push(product);
+                updateCartDisplay();
+            });
+        });
+
+        document.getElementById('clear-cart-btn').addEventListener('click', function() {
+            cart = [];
+            updateCartDisplay();
+        });
+
+        // Initialize cart display on page load
+        updateCartDisplay();
+    </script>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 EduTech | Follow us on 
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook fa-lg"></i></a> 
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter fa-lg"></i></a> 
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a> 
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <br> <br>
+            Developed by: ORLANDA, NILSIE B. | BSIT 3-A | S.I.A 2 
+        </p>
+    </footer>    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

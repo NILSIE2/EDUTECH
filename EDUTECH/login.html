@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduTech | Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  
+    body {
+      display: flex;
+      min-height: 100vh;
+      background-color: #1e1e2f;
+      color: #fff;
+      flex-direction: column;
+    }
+  
+    .container {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  
+    .left {
+      flex: 1;
+      background-color: #292940;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+      text-align: center;
+    }
+  
+    .left h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ffc107;
+    }
+  
+    .left p {
+      font-size: 16px;
+      max-width: 400px;
+      line-height: 1.5;
+    }
+  
+    .right {
+      flex: 1;
+      background-color: #1e1e2f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+  
+    .form-box {
+      width: 100%;
+      max-width: 350px;
+    }
+  
+    .form-box h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #ffc107;
+      text-align: center;
+    }
+  
+    .form-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #2f2f45;
+      color: #fff;
+    }
+  
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffc107;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    .form-box button:hover {
+      background-color: #e6a700;
+    }
+  
+    .social-btns {
+      margin-top: 15px;
+    }
+  
+    .social-btns button {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      background-color: #3b3b5b;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+  
+    .social-btns button:hover {
+      background-color: #505070;
+    }
+  
+    .social-btns .fa-google {
+      color: #DB4437;
+    }
+  
+    .social-btns .fa-facebook {
+      color: #1877F2;
+    }
+  
+    .alt-option {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  
+    a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+  
+    a:hover {
+      text-decoration: underline;
+    }
+  
+    .message {
+      text-align: center;
+      margin-bottom: 10px;
+      height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  
+    /* ✅ Tablets & Small Screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+  
+      .left, .right {
+        width: 100%;
+        padding: 20px;
+      }
+  
+      .left h1 {
+        font-size: 30px;
+      }
+  
+      .form-box h2 {
+        font-size: 24px;
+      }
+    }
+  
+    /* ✅ Phones & Very Small Screens */
+    @media (max-width: 480px) {
+      .left {
+        padding: 20px 10px;
+      }
+  
+      .left h1 {
+        font-size: 24px;
+      }
+  
+      .left p {
+        font-size: 14px;
+      }
+  
+      .form-box {
+        padding: 20px 10px;
+        max-width: 100%;
+      }
+  
+      .form-box h2 {
+        font-size: 20px;
+      }
+  
+      .form-box input,
+      .form-box button {
+        font-size: 14px;
+        padding: 10px;
+      }
+  
+      .social-btns button {
+        font-size: 14px;
+        gap: 6px;
+      }
+    }
+  </style>
+  
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>EduTech</h1>
+      <p>Welcome back to the future of learning. Log in to continue your journey with EduTech.</p>
+    </div>
+    <div class="right">
+      <div class="form-box">
+        <h2>Login</h2>
+
+        <!-- Message Box -->
+        <div class="message" id="message"></div>
+
+        <input type="email" placeholder="Email Address" id="email" required />
+        <input type="password" placeholder="Password" id="password" required />
+        <button type="submit" onclick="loginUser()">Login</button>
+
+        <div class="social-btns">
+          <button><i class="fab fa-google"></i> Continue with Google</button>
+          <button><i class="fab fa-facebook"></i> Continue with Facebook</button>
+          <button><i class="fab fa-github"></i> Continue with Github</button>
+        </div>
+
+        <div class="alt-option">
+            Don't have an account? <a href="signup.html">Sign up here</a><br>
+            <a href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function loginUser() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const message = document.getElementById("message");
+  
+      if (email === "" || password === "") {
+        message.textContent = "Please enter both email and password.";
+        message.style.color = "lightcoral";
+        return;
+      }
+  
+      // Fake login logic
+      localStorage.setItem("isLoggedIn", "true");
+      localStorage.setItem("userEmail", email);
+  
+      message.textContent = "Login successful! Redirecting...";
+      message.style.color = "lightgreen";
+  
+      // Close the modal (if applicable)
+      const modal = document.getElementById("loginModal"); // Replace with your modal's ID
+      if (modal) {
+        modal.style.display = "none"; // Hides the modal
+      }
+  
+      // Redirect to acclog.html after a short delay
+      setTimeout(() => {
+        window.location.href = "acclog.html"; // Redirect to acclog.html
+      }, 1500); // Delay for effect
+    }
+  </script>
+</body>
+</html>

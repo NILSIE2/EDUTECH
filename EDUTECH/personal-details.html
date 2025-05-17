@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduTech | Personal Details</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #1e1e2f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      max-width: 400px;
+    }
+
+    .form-box {
+      width: 100%;
+      max-width: 350px;
+      background-color: #292940;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .form-box input, .form-box select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #2f2f45;
+      color: #fff;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      background-color: #ffc107;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .form-box button:hover {
+      background-color: #e6a700;
+    }
+
+    .back-link {
+      margin-top: 20px;
+    }
+
+    .back-link a {
+      color: #ffc107;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 500px) {
+      .form-box {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Personal Details</h1>
+  <p>Fill in your personal info to continue learning with EduTech.</p>
+
+  <form class="form-box" id="detailsForm">
+    <input type="text" id="name" placeholder="Full Name" required />
+    <input type="date" id="birthdate" required />
+    <select id="gender" required>
+      <option value="" disabled selected>Select Gender</option>
+      <option>Male</option>
+      <option>Female</option>
+      <option>Other</option>
+    </select>
+    <input type="text" id="phone" placeholder="Phone Number" required />
+    <button type="submit">Continue</button>
+  </form>
+
+  <div class="back-link">
+    <a href="acclog.html">← Back to Dashboard</a>
+  </div>
+
+  <script>
+    document.getElementById('detailsForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const birthdate = document.getElementById('birthdate').value;
+      const gender = document.getElementById('gender').value;
+      const phone = document.getElementById('phone').value.trim();
+
+      if (!name || !birthdate || !gender || !phone) {
+        alert('Please fill in all fields!');
+        return;
+      }
+
+      // If all fields are filled, redirect
+      window.location.href = 'acclog.html';
+    });
+  </script>
+
+</body>
+</html>

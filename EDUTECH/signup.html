@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduTech | Sign Up</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+      background-color: #1e1e2f;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+    }
+
+    .left {
+      flex: 1;
+      background-color: #292940;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .left h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #ffc107;
+    }
+
+    .left p {
+      font-size: 16px;
+      text-align: center;
+      max-width: 400px;
+      line-height: 1.5;
+    }
+
+    .right {
+      flex: 1;
+      background-color: #1e1e2f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .form-box {
+      width: 100%;
+      max-width: 350px;
+      padding: 30px 0;
+    }
+
+    .form-box h2 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #ffc107;
+      line-height: 1.2;
+    }
+
+    .form-box input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      background-color: #2f2f45;
+      color: #fff;
+    }
+
+    .form-box button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ffc107;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-box button:hover {
+      background-color: #e6a700;
+    }
+
+    .social-btns {
+      margin-top: 15px;
+    }
+
+    .social-btns button {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      background-color: #3b3b5b;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    .social-btns button:hover {
+      background-color: #505070;
+    }
+
+    .social-btns .fa-google {
+      color: #DB4437;
+    }
+
+    .social-btns .fa-facebook {
+      color: #1877F2;
+    }
+
+    .alt-option {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .container {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
+
+      .left, .right {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .left h1 {
+        font-size: 30px;
+      }
+
+      .left p {
+        text-align: center;
+      }
+
+      .form-box {
+        max-width: 100%;
+        margin: 0 auto;
+      }
+
+      .form-box h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>EduTech</h1>
+      <p>Join EduTech and unlock a world of digital learning. Sign up to start your educational journey with us today.</p>
+    </div>
+    <div class="right">
+      <div class="form-box">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Create Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        
+        <!-- Fake Sign Up button -->
+        <button type="button" onclick="fakeSignup()">Sign Up</button>
+
+        <div class="social-btns">
+          <button><i class="fab fa-google"></i> Sign up with Google</button>
+          <button><i class="fab fa-facebook"></i> Sign up with Facebook</button>
+          <button><i class="fab fa-github"></i> Sign up with Github</button>
+        </div>
+
+        <div class="alt-option">
+          Already have an account? <a href="login.html">Log in here</a><br>
+          <a href="index.html">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fake sign-up script -->
+  <script>
+    function fakeSignup() {
+      alert("Sign Up Successful! Redirecting to your dashboard...");
+      setTimeout(() => {
+        window.location.href = "acclog.html"; // You can change this to any fake page
+      }, 2000);
+    }
+  </script>
+</body>
+</html>

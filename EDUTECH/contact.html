@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduTech | Contact </title>
+    <link rel="icon" type="image/x-icon" href="edutechfav1.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">EduTech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="library.html">Library</a></li> -->
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="authDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Account
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="authDropdown">
+                            <li><a class="dropdown-item" href="login.html">Log in</a></li>
+                            <li><a class="dropdown-item" href="signup.html">Sign up</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Contact Section -->
+    <section class="container my-5 contact-section">
+        <h2 class="text-center fw-bold">📞 Get in Touch with Us</h2>
+        <p class="text-center text-muted">Have questions? We'd love to hear from you!</p>
+
+        <div class="row mt-4">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Your Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Write your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100">Send Message</button>
+                </form>
+            </div>
+
+         <!-- Contact Information -->
+            <div class="col-md-6">
+                <div class="contact-details p-4 bg-light rounded">
+                    <h4 class="fw-bold">📍 Our Location</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 666 Nilsie Ganda Masipag na mapagmahal pa Street, Manila, Philippines</p>
+                    <h4 class="fw-bold">📧 Email</h4>
+                    <p><i class="fas fa-envelope"></i> support@edutech.com</p>
+                    <h4 class="fw-bold">📞 Phone</h4>
+                    <p><i class="fas fa-phone"></i> +63 912 345 6789</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Google Map (Philippines) -->
+            <div class="row mt-4">
+                <div class="col">
+                    <iframe 
+                        class="w-100 rounded" 
+                        height="300" 
+                        frameborder="0" 
+                        style="border:0;" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15439.79691377074!2d121.02040003374671!3d14.599512070453564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8d704f3f7e9%3A0x7345c4e95c6a9c8b!2sManila%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1630604792253!5m2!1sen!2sph" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 EduTech | Follow us on 
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook fa-lg"></i></a> 
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter fa-lg"></i></a> 
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a> 
+            <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube fa-lg"></i></a>
+            <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+            <br> <br>
+            Developed by: ORLANDA, NILSIE B. | BSIT 3-A | S.I.A 2 
+        </p>
+    </footer>    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
